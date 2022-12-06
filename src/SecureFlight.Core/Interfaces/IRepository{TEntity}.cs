@@ -13,4 +13,8 @@ public interface IRepository<TEntity>
     Task<IReadOnlyList<TEntity>> FilterAsync(Expression<Func<TEntity, bool>> predicate);
 
     TEntity Update(TEntity entity);
+
+    TEntity Add(TEntity entity);
+
+    TEntity Remove(TEntity entity);
 }
