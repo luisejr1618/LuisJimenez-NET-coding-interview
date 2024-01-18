@@ -32,6 +32,7 @@ namespace SecureFlight.Infrastructure.Repositories
         {
             var entry = _context.Entry(entity);
             entry.State = EntityState.Modified;
+            _context.SaveChanges();
             return entity;
         }
     }

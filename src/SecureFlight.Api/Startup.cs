@@ -36,6 +36,7 @@ namespace SecureFlight.Api
             services.AddDbContext<SecureFlightDbContext>(options => options.UseInMemoryDatabase("SecureFlight"));
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped(typeof(IService<>), typeof(BaseService<>));
+            services.AddScoped(typeof(FlightService), typeof(FlightService));
 
             services.AddSwaggerGen(c =>
             {
